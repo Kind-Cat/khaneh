@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#e7f3fb" />
+  <title>خانه‌نو — خرید و اجاره ملک | Final Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div><div class="ambient ambient-c"></div>
+
+  <div class="app-shell">
+    <header class="topbar glass">
+      <div class="brand-spacer" aria-hidden="true"></div>
+      <nav class="main-nav" id="mainNav">
+        <a data-route="home" href="#/">خانه</a>
+        <a data-route="browse" href="#/browse">مرور آگهی‌ها</a>
+        <a data-route="create" href="#/create">ایجاد آگهی</a>
+      </nav>
+      <div class="top-actions">
+        <button id="languageToggle" class="lang-toggle" aria-label="تغییر زبان">EN</button>
+        <button id="themeToggle" class="icon-btn" aria-label="تغییر حالت رنگی">◐</button>
+        <button id="loginBtn" class="btn btn-blue btn-small">ورود به حساب</button>
+      </div>
+    </header>
+
+    <main id="app"></main>
+
+    <footer class="footer"><span>خانه‌نو © ۲۰۲۶</span><span>خرید و اجاره، ساده‌تر از همیشه.</span></footer>
+  </div>
+
+  <div class="modal language-gate hidden" id="languageModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card language-card">
+      <span class="eyebrow">WELCOME</span>
+      <h3>زبان را انتخاب کنید</h3>
+      <p>Choose your language to continue.</p>
+      <div class="language-options">
+        <button class="language-option" data-lang-choice="fa"><strong>فارسی</strong><span>Persian · RTL</span></button>
+        <button class="language-option" data-lang-choice="en"><strong>English</strong><span>English · LTR</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="loginModal">
+    <div class="modal-backdrop" data-close="loginModal"></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close="loginModal">×</button>
+      <span class="eyebrow">ورود به حساب</span><h3>خوش برگشتی.</h3><p>برای ذخیره آگهی‌ها و مدیریت ملک‌های خود وارد شوید.</p>
+      <div class="input-group"><label>شماره موبایل یا ایمیل</label><input placeholder="example@mail.com" /></div>
+      <div class="input-group"><label>رمز عبور</label><input type="password" placeholder="••••••••" /></div>
+      <button class="btn btn-blue full" id="loginSubmit">ورود</button>
+      <div class="demo-note">نسخه نمایشی — اطلاعات واقعاً ارسال نمی‌شود.</div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
